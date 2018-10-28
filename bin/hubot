@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+npm install
+export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
+export HUBOT_BEARYCHAT_TOKENS="5a56fef2f4ea93be3521db2b5d8002a5"
+export HUBOT_BEARYCHAT_MODE=rtm
+
+exec node_modules/.bin/hubot --name "tiny" "$@"
