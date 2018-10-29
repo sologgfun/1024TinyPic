@@ -5,6 +5,7 @@
   "author": "tiny",
   "description": "tinypic~",
   "dependencies": {
+    "axios": "^0.18.0",
     "hubot": "^3.1.1",
     "hubot-bearychat": "^0.7.2",
     "hubot-diagnostics": "^1.0.0",
