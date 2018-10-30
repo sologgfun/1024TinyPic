@@ -1,0 +1,39 @@
+// // Description:  
+// //   This is a tinypic.  
+// // Commands:  
+// //   okbot helo - Reply with world!  
+// var process = require("process");
+// var tinify = require("tinify");
+// tinify.key = "VRX9bi9e8ZyI63fV9d4uZcc35xrvvHTq";
+
+// module.exports = (robot) => {
+
+//     var source = tinify.fromUrl("https://tinypng.com/images/panda-happy.png");
+
+//     source.toFile("old.jpg");
+//     source.toFile("./node_modules/hubot/src/public/old.jpg");
+//     console.log(process.cwd());
+
+//     robot.hear(/.*/, (res) => {
+//         // console.log(res);
+//         // res.send(pic);
+//         robot.emit('bearychat.attachment', {
+//             message: res.message,
+//             text: '当时我就念了...',
+//             attachments: [
+//                 {
+//                     color: '#cb3f20',
+//                     text: '苟利国家生死以',
+//                 },
+//                 {
+//                     text: '岂因祸福避趋之',
+//                 },
+//                 {
+//                     images: [
+//                         { url: pic },
+//                     ]
+//                 }]
+//         }
+//         );
+//     });
+// }
