@@ -68,8 +68,10 @@ module.exports = (robot) => {
             });
     };
 
-    robot.hear(/.*/, (res) => {
+    robot.respond(/.*/, (res) => {
         var picurl = res.message.user.message.text;
+        // console.log(res.message.text.split(" "));
+        picurl = res.message.text.split(" ")[1];
         console.log(picurl);
         tinypic(picurl, res);
     });
