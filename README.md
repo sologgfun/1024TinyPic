@@ -21,3 +21,6 @@ npm install
 https://github.com/bearyinnovative/hubot-bearychat/blob/master/README_CN.md
 
 ①将图片url地址传给TinyBear机器人它就会返回压缩后的图片啦
+
+![pic1](http://p0.meituan.net/dpgroup/8ce52d19ccfd524787e6cd930eef6a4977323.png)
+![pic2](http://p1.meituan.net/dpgroup/0c65dab4ee56f37de762ab2480340a54149447.png)
