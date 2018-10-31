@@ -1,0 +1,75 @@
+// Description:  
+//   This is a tinypic.  
+// Commands:  
+//   okbot helo - Reply with world!  
+var fs = require("fs");
+var process = require("process");
+var tinify = require("tinify");
+var axios = require("axios");
+tinify.key = "VRX9bi9e8ZyI63fV9d4uZcc35xrvvHTq";
+
+module.exports = (robot) => {
+
+    var axpost = function (base64) {
+        axios.post('http://localhost:3000', {
+            pic: base64
+        })
+            .then(function (response) {
+                console.log("res");
+            })
+            .catch(function (error) {
+                console.log("error");
+            });
+        // axios({
+        //     method: 'post',
+        //     url: 'http://localhost:3000/upload',
+        //     data: {
+        //         firstName: 'Fred',
+        //         lastName: 'Flintstone'
+        //     }
+        // });
+    }
+    var base64pic;
+    fs.readFile(`${process.cwd()}/new.jpg`, (err, data) => {
+        if (err) throw err;
+        // console.log(data);
+        axpost(data);
+    });
+
+    function rename() {
+        console.log('1');
+        // let nodepath = process.cwd();
+        // robot.emit('bearychat.attachment', {
+        //     message: res.message,
+        //     text: 'tinypic',
+        //     attachments: [
+        //         {
+        //             images: [
+        //                 { url: "./node_modules/hubot/src/public/tiny.jpg" },
+        //             ]
+        //         }]
+        // })
+    }
+    function tinypic(url, res) {
+        // "https://tinypng.com/images/panda-happy.png"
+        var source = tinify.fromUrl(url);
+        base64pic = source.toFile("image.png");
+        base64pic.then(rename)
+            .catch(function () {
+                robot.emit('bearychat.attachment', {
+                    message: res.message,
+                    text: 'tinypic',
+                    attachments: [
+                        {
+                            text: "please input valid image url"
+                        }]
+                })
+            });
+    };
+
+    robot.hear(/.*/, (res) => {
+        var picurl = res.message.user.message.text;
+        console.log(picurl);
+        tinypic(picurl, res);
+    });
+}
