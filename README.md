@@ -26,4 +26,5 @@ https://github.com/bearyinnovative/hubot-bearychat/blob/master/README_CN.md
 
 作品链接https://github.com/sologgfun/1024TinyPic
 
-(附上滴滴云上的图床代码)
+(附上滴滴云上的图床代码
+https://github.com/sologgfun/myImgur)
