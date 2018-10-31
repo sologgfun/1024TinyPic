@@ -11,7 +11,7 @@ module.exports = (robot) => {
 
     var axpost = function (base64, res) {
         var randomnum = Math.random();
-        axios.post('http://116.85.17.155:3000', {
+        axios.post('http://localhost:3000', {
             pic: base64,
             math: randomnum
         })
