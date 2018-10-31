@@ -1,7 +1,9 @@
 **1024TinyPic**
 
 *基于hubot和以bearchat作为adapter的机器人！*
+
 *通过大名鼎鼎的https://tinypng.com/提供的API完成图片压缩并返回*
+
 *是程序员的好助手，设计狮的小帮手---rua!!!*
 
 机器人名字叫做“TinyBear”！
