@@ -23,3 +23,7 @@ https://github.com/bearyinnovative/hubot-bearychat/blob/master/README_CN.md
 ![pic3](http://p1.meituan.net/dpgroup/7e83184920898759dbb66f98e42da6ca25604.png)
 
 (压缩率还是很高的，第三幅图的前两个压缩率比较低是因为之前压缩过一次啦)
+
+作品链接https://github.com/sologgfun/1024TinyPic
+
+(附上滴滴云上的图床代码)
